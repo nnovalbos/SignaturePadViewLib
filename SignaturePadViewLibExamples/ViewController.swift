@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import SignaturePadViewLib
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var blackboard: BlackboardView!
+    
+    @IBOutlet weak var signatureImage: UIImageView!
+    
+    @IBAction func ClearBlackboard(){
+        blackboard.clear()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func getSignatureImage(_ sender: Any) {
+        if let signature = blackboard.getImage() {
+            signatureImage.image = signature
+        }
+    }
 }
 

@@ -16,6 +16,10 @@
 		2A9A675224DAD2FE00955ED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A675024DAD2FE00955ED5 /* Main.storyboard */; };
 		2A9A675424DAD30000955ED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A675324DAD30000955ED5 /* Assets.xcassets */; };
 		2A9A675724DAD30000955ED5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A675524DAD30000955ED5 /* LaunchScreen.storyboard */; };
+		2A9A676124DB131600955ED5 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A676024DB131600955ED5 /* Line.swift */; };
+		2A9A676324DB134400955ED5 /* IBlackboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A676224DB134400955ED5 /* IBlackboardDelegate.swift */; };
+		2A9A676524DB136E00955ED5 /* BlackboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A676424DB136E00955ED5 /* BlackboardView.swift */; };
+		2A9A676924DB13F700955ED5 /* BlackboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A676824DB13F700955ED5 /* BlackboardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,10 @@
 		2A9A675324DAD30000955ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A9A675624DAD30000955ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A9A675824DAD30000955ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A9A676024DB131600955ED5 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		2A9A676224DB134400955ED5 /* IBlackboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBlackboardDelegate.swift; sourceTree = "<group>"; };
+		2A9A676424DB136E00955ED5 /* BlackboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackboardView.swift; sourceTree = "<group>"; };
+		2A9A676824DB13F700955ED5 /* BlackboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackboardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,10 @@
 		2A9A672C24DACE7100955ED5 /* SignaturePadViewLib */ = {
 			isa = PBXGroup;
 			children = (
+				2A9A675F24DB12FC00955ED5 /* Models */,
+				2A9A675E24DB12B700955ED5 /* ViewModels */,
+				2A9A675D24DB12B000955ED5 /* Views */,
+				2A9A675C24DB12A900955ED5 /* Contracts */,
 				2A9A672D24DACE7100955ED5 /* SignaturePadViewLib.h */,
 				2A9A672E24DACE7100955ED5 /* Info.plist */,
 			);
@@ -121,6 +133,38 @@
 				2A9A675824DAD30000955ED5 /* Info.plist */,
 			);
 			path = SignaturePadViewLibExamples;
+			sourceTree = "<group>";
+		};
+		2A9A675C24DB12A900955ED5 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A676224DB134400955ED5 /* IBlackboardDelegate.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		2A9A675D24DB12B000955ED5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A676424DB136E00955ED5 /* BlackboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2A9A675E24DB12B700955ED5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A676824DB13F700955ED5 /* BlackboardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2A9A675F24DB12FC00955ED5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A676024DB131600955ED5 /* Line.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +246,7 @@
 				TargetAttributes = {
 					2A9A672924DACE7100955ED5 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					2A9A673224DACE7100955ED5 = {
 						CreatedOnToolsVersion = 11.6;
@@ -263,6 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9A676524DB136E00955ED5 /* BlackboardView.swift in Sources */,
+				2A9A676124DB131600955ED5 /* Line.swift in Sources */,
+				2A9A676324DB134400955ED5 /* IBlackboardDelegate.swift in Sources */,
+				2A9A676924DB13F700955ED5 /* BlackboardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +486,7 @@
 		2A9A673F24DACE7100955ED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JHTZUEGT7B;
@@ -453,6 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nnovalbos.SignaturePadViewLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,6 +512,7 @@
 		2A9A674024DACE7100955ED5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JHTZUEGT7B;
@@ -485,6 +537,7 @@
 		2A9A674224DACE7100955ED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JHTZUEGT7B;
 				INFOPLIST_FILE = SignaturePadViewLibTests/Info.plist;
@@ -503,6 +556,7 @@
 		2A9A674324DACE7100955ED5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JHTZUEGT7B;
 				INFOPLIST_FILE = SignaturePadViewLibTests/Info.plist;
