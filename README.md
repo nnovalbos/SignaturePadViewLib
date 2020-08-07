@@ -11,4 +11,8 @@ Then, create one view in your controller and change the view type on the identit
 You can select the stroke color and the stroke with on the attributes inspector
 
 
-![](attrinbutesInspector.png)
+![](attributesInspector.png)
+
+### Projext Example Demo
+
+![](SignaturePadViewLibExamples/signDemo.gif)
