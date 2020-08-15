@@ -17,20 +17,26 @@ class BlackboardViewModel {
     
     var delegate : IBlackboardDelegate?
     
-    func CreateLine(){
-        lines.append(Line(withRect: CGRect(x: begin!.x, y: begin!.y, width: end!.x - begin!.x, height: end!.y - begin!.y)))
+    func createLine(){
+        
+        if let beginPoint = self.begin, let endPoint = self.end {
+            lines.append(Line(withRect: CGRect(x: beginPoint.x, y: beginPoint.y, width: endPoint.x - beginPoint.x, height: endPoint.y - beginPoint.y)))
+        }
     }
     
-    func UpdatePoints(){
-        begin?.x = end!.x;
-        begin?.y =  end!.y;
+    func updatePoints(){
+        
+        if let endPoint = self.end {
+            begin?.x = endPoint.x
+            begin?.y = endPoint.y
+        }
     }
     
-    func Paint(){
+    func paint(){
         delegate?.DrawLines(lines: lines)
     }
     
-    func ClearBlackboard(){
+    func clearBlackboard(){
         lines = []
         delegate?.ClearBlackBoard()
     }

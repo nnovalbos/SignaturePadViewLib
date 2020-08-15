@@ -42,11 +42,12 @@ open class BlackboardView: UIView, IBlackboardDelegate {
         
         if let touch = touches.first {
             vm.end = touch.location(in: self)
-            vm.CreateLine()
-            vm.UpdatePoints()
-            vm.Paint()
+            vm.createLine()
+            vm.updatePoints()
+            vm.paint()
         }
     }
+    
     
     open override func draw(_ rect: CGRect) {
         
@@ -67,7 +68,7 @@ open class BlackboardView: UIView, IBlackboardDelegate {
     // MARK: - API Functions
     
     open func clear(){
-        self.vm.ClearBlackboard()
+        self.vm.clearBlackboard()
     }
     
     open func getImage() -> UIImage? {
@@ -82,6 +83,19 @@ open class BlackboardView: UIView, IBlackboardDelegate {
         self.backgroundColor = color;
         
         return img;
+    }
+    
+    open func getSVG()-> String {
+        
+        var svgStr = String("<svg viewBox=\"0 0 \(self.bounds.maxX) \(self.bounds.maxY)\" width=\"\(self.bounds.maxY)\" height=\"\(self.bounds.maxY)\" xmlns=\"http://www.w3.org/2000/svg\">")
+    
+        for line in lines {
+            svgStr.append(line.svgLine(withStrokeWidth: strokeWidth))
+        }
+
+        svgStr.append("</svg>")
+        
+        return svgStr;
     }
     
     // MARK: - IBlackboardDelegate methods
