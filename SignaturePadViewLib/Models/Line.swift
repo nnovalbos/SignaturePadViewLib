@@ -25,16 +25,9 @@ class Line: NSObject {
     
     func svgLine(withStrokeWidth width: CGFloat, withStrokeColor color: CGColor) -> String {
         
-        var r = CGFloat(0)
-        var g = CGFloat(0)
-        var b = CGFloat (0)
+        let rgbValues = color.rgbColor()
         
-        if let rgbComponents = color.components {
-            r = rgbComponents[0] * 255
-            g = rgbComponents[1] * 255
-            b = rgbComponents[2] * 255
-        }
-        
-        return "<polyline points=\"\(originPoint.x), \(originPoint.y) \(endPoint.x), \(endPoint.y)\" fill=\"none\" style=\"stroke:rgb(\(r),\(g),\(b));stroke-width:\(width)\"/>"
+        return "<polyline points=\"\(originPoint.x), \(originPoint.y) \(endPoint.x), \(endPoint.y)\" fill=\"none\" style=\"stroke:rgb(\(rgbValues[0]),\(rgbValues[1]),\(rgbValues[2]));stroke-width:\(width)\"/>"
     }
 }
+
