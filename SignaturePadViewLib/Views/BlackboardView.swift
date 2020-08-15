@@ -90,7 +90,7 @@ open class BlackboardView: UIView, IBlackboardDelegate {
         var svgStr = String("<svg viewBox=\"0 0 \(self.bounds.maxX) \(self.bounds.maxY)\" width=\"\(self.bounds.maxY)\" height=\"\(self.bounds.maxY)\" xmlns=\"http://www.w3.org/2000/svg\">")
     
         for line in lines {
-            svgStr.append(line.svgLine(withStrokeWidth: strokeWidth))
+            svgStr.append(line.svgLine(withStrokeWidth: strokeWidth, withStrokeColor: strokeColor.cgColor))
         }
 
         svgStr.append("</svg>")
