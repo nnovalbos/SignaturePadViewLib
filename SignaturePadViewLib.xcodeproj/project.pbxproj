@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A8F5EFC24E7D84F002FA512 /* CGColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F5EFB24E7D84F002FA512 /* CGColor+Extension.swift */; };
 		2A9A673424DACE7100955ED5 /* SignaturePadViewLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9A672A24DACE7100955ED5 /* SignaturePadViewLib.framework */; };
 		2A9A673924DACE7100955ED5 /* SignaturePadViewLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A673824DACE7100955ED5 /* SignaturePadViewLibTests.swift */; };
 		2A9A673B24DACE7100955ED5 /* SignaturePadViewLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9A672D24DACE7100955ED5 /* SignaturePadViewLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,6 +21,7 @@
 		2A9A676324DB134400955ED5 /* IBlackboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A676224DB134400955ED5 /* IBlackboardDelegate.swift */; };
 		2A9A676524DB136E00955ED5 /* BlackboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A676424DB136E00955ED5 /* BlackboardView.swift */; };
 		2A9A676924DB13F700955ED5 /* BlackboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A676824DB13F700955ED5 /* BlackboardViewModel.swift */; };
+		2AD9A7EF24E7F2F200FEB798 /* BlackboardView+Extension+v110.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9A7EE24E7F2F200FEB798 /* BlackboardView+Extension+v110.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A8F5EFB24E7D84F002FA512 /* CGColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor+Extension.swift"; sourceTree = "<group>"; };
 		2A9A672A24DACE7100955ED5 /* SignaturePadViewLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignaturePadViewLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9A672D24DACE7100955ED5 /* SignaturePadViewLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignaturePadViewLib.h; sourceTree = "<group>"; };
 		2A9A672E24DACE7100955ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		2A9A676224DB134400955ED5 /* IBlackboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBlackboardDelegate.swift; sourceTree = "<group>"; };
 		2A9A676424DB136E00955ED5 /* BlackboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackboardView.swift; sourceTree = "<group>"; };
 		2A9A676824DB13F700955ED5 /* BlackboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackboardViewModel.swift; sourceTree = "<group>"; };
+		2AD9A7EE24E7F2F200FEB798 /* BlackboardView+Extension+v110.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlackboardView+Extension+v110.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A8F5EFA24E7D816002FA512 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A8F5EFB24E7D84F002FA512 /* CGColor+Extension.swift */,
+				2AD9A7EE24E7F2F200FEB798 /* BlackboardView+Extension+v110.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2A9A672024DACE7100955ED5 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +115,7 @@
 		2A9A672C24DACE7100955ED5 /* SignaturePadViewLib */ = {
 			isa = PBXGroup;
 			children = (
+				2A8F5EFA24E7D816002FA512 /* Extensions */,
 				2A9A675F24DB12FC00955ED5 /* Models */,
 				2A9A675E24DB12B700955ED5 /* ViewModels */,
 				2A9A675D24DB12B000955ED5 /* Views */,
@@ -309,9 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A9A676524DB136E00955ED5 /* BlackboardView.swift in Sources */,
+				2A8F5EFC24E7D84F002FA512 /* CGColor+Extension.swift in Sources */,
 				2A9A676124DB131600955ED5 /* Line.swift in Sources */,
 				2A9A676324DB134400955ED5 /* IBlackboardDelegate.swift in Sources */,
 				2A9A676924DB13F700955ED5 /* BlackboardViewModel.swift in Sources */,
+				2AD9A7EF24E7F2F200FEB798 /* BlackboardView+Extension+v110.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +504,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JHTZUEGT7B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -501,7 +518,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nnovalbos.SignaturePadViewLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -516,6 +533,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JHTZUEGT7B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -529,7 +547,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nnovalbos.SignaturePadViewLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
