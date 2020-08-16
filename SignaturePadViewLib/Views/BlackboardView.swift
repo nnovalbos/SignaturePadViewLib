@@ -71,7 +71,9 @@ open class BlackboardView: UIView, IBlackboardDelegate {
         self.vm.clearBlackboard()
     }
     
+    @available(*, deprecated, renamed: "getImage(adjustToShape:)")
     open func getImage() -> UIImage? {
+        
         let color = self.backgroundColor
         self.backgroundColor=UIColor.clear
         
@@ -84,20 +86,7 @@ open class BlackboardView: UIView, IBlackboardDelegate {
         
         return img;
     }
-    
-    open func getSVG()-> String {
-        
-        var svgStr = String("<svg viewBox=\"0 0 \(self.bounds.maxX) \(self.bounds.maxY)\" width=\"\(self.bounds.maxY)\" height=\"\(self.bounds.maxY)\" xmlns=\"http://www.w3.org/2000/svg\">")
-    
-        for line in lines {
-            svgStr.append(line.svgLine(withStrokeWidth: strokeWidth, withStrokeColor: strokeColor.cgColor))
-        }
 
-        svgStr.append("</svg>")
-        
-        return svgStr;
-    }
-    
     // MARK: - IBlackboardDelegate methods
     
     func DrawLines(lines: [Line]) {
@@ -110,4 +99,5 @@ open class BlackboardView: UIView, IBlackboardDelegate {
         lines = []
         setNeedsDisplay()
     }
+
 }

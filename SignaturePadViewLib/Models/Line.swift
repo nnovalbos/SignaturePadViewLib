@@ -15,7 +15,6 @@ class Line: NSObject {
     let originPoint : CGPoint
     let endPoint:CGPoint
     
-    
     init(withRect rect: CGRect ) {
         
         self.points = rect
