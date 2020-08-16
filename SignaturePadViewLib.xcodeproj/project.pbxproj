@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3885E324E9A4B1005E92F2 /* SignaturePadViewLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9A672A24DACE7100955ED5 /* SignaturePadViewLib.framework */; };
+		2A3885E424E9A4B1005E92F2 /* SignaturePadViewLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9A672A24DACE7100955ED5 /* SignaturePadViewLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A3885E924E9A4DF005E92F2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3885E824E9A4DF005E92F2 /* WebKit.framework */; };
 		2A8F5EFC24E7D84F002FA512 /* CGColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F5EFB24E7D84F002FA512 /* CGColor+Extension.swift */; };
 		2A9A673424DACE7100955ED5 /* SignaturePadViewLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9A672A24DACE7100955ED5 /* SignaturePadViewLib.framework */; };
 		2A9A673924DACE7100955ED5 /* SignaturePadViewLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A673824DACE7100955ED5 /* SignaturePadViewLibTests.swift */; };
@@ -25,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2A3885E524E9A4B1005E92F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A9A672124DACE7100955ED5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A9A672924DACE7100955ED5;
+			remoteInfo = SignaturePadViewLib;
+		};
 		2A9A673524DACE7100955ED5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A9A672124DACE7100955ED5 /* Project object */;
@@ -34,7 +44,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2A3885E724E9A4B1005E92F2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2A3885E424E9A4B1005E92F2 /* SignaturePadViewLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2A3885E824E9A4DF005E92F2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		2A8F5EFB24E7D84F002FA512 /* CGColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor+Extension.swift"; sourceTree = "<group>"; };
 		2A9A672A24DACE7100955ED5 /* SignaturePadViewLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignaturePadViewLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9A672D24DACE7100955ED5 /* SignaturePadViewLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignaturePadViewLib.h; sourceTree = "<group>"; };
@@ -77,12 +102,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A3885E924E9A4DF005E92F2 /* WebKit.framework in Frameworks */,
+				2A3885E324E9A4B1005E92F2 /* SignaturePadViewLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A3885E224E9A4B1005E92F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A3885E824E9A4DF005E92F2 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2A8F5EFA24E7D816002FA512 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +134,7 @@
 				2A9A673724DACE7100955ED5 /* SignaturePadViewLibTests */,
 				2A9A674924DAD2FE00955ED5 /* SignaturePadViewLibExamples */,
 				2A9A672B24DACE7100955ED5 /* Products */,
+				2A3885E224E9A4B1005E92F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,10 +274,12 @@
 				2A9A674424DAD2FE00955ED5 /* Sources */,
 				2A9A674524DAD2FE00955ED5 /* Frameworks */,
 				2A9A674624DAD2FE00955ED5 /* Resources */,
+				2A3885E724E9A4B1005E92F2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2A3885E624E9A4B1005E92F2 /* PBXTargetDependency */,
 			);
 			name = SignaturePadViewLibExamples;
 			productName = SignaturePadViewLibExamples;
@@ -352,6 +390,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2A3885E624E9A4B1005E92F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A9A672924DACE7100955ED5 /* SignaturePadViewLib */;
+			targetProxy = 2A3885E524E9A4B1005E92F2 /* PBXContainerItemProxy */;
+		};
 		2A9A673624DACE7100955ED5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2A9A672924DACE7100955ED5 /* SignaturePadViewLib */;
@@ -601,7 +644,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JHTZUEGT7B;
 				INFOPLIST_FILE = SignaturePadViewLibExamples/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,7 +663,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JHTZUEGT7B;
 				INFOPLIST_FILE = SignaturePadViewLibExamples/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
