@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "SignaturePadViewLib"
-  spec.version      = "1.0.1"
+  spec.version      = "1.1.0"
   spec.summary      = "A CocoaPods library written in Swift"
 
  
